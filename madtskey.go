@@ -23,7 +23,7 @@ func init() {
 
 // This function will create the API Key for use in joining new machines
 // to the tailnet.
-func CreateAPIKey(expirySeconds int, description string, tags []string) (*TSResponse, error) {
+func CreateAuthKey(expirySeconds int, description string, tags []string) (*TSResponse, error) {
 	// Using the Tailscale OAuth client
 	var oauthConfig = &clientcredentials.Config{
 		ClientID:     os.Getenv("OAUTH_CLIENT_ID"),

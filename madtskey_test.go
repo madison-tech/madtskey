@@ -8,7 +8,7 @@ import (
 func TestCreateAPIKey(t *testing.T) {
 	description := "my test key"
 	tags := []string{"tag:mad-ts-key"}
-	key, err := CreateAPIKey(300, description, tags)
+	key, err := CreateAuthKey(300, description, tags)
 	if err != nil {
 		log.Fatal(err)
 	}
